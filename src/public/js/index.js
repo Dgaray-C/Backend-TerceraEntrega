@@ -4,7 +4,7 @@ const borrarProducto = async (cartId, productId) => {
 }
 
 const agregarProducto = async (productId, cantidad = 1) => {
-    const responseCart = await fetch(`http://localhost:8080/api/carts`)
+    const responseCart = await fetch(`http://localhost:8080/api/carts/6791d26f02533399c23219a5`)
     const dataCart = await responseCart.json()
 
 
@@ -44,7 +44,7 @@ const detalleCarrito = document.querySelector('#detalleCarrito')
 
 const mostrarCart = async () => {
 
-    const response = await fetch(`http://localhost:8080/api/carts`)
+    const response = await fetch(`http://localhost:8080/api/carts/6791d26f02533399c23219a5`)
     const data = await response.json()
 
     detalleCarrito.innerHTML = `<h4>Carro de Compras</h4><ul id="cartLista" class="list-group">

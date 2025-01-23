@@ -5,7 +5,7 @@ import { ProductModel } from '../models/products.model.js';
 const route = Router()
 
 
-route.get('/', async (req, res) => {
+route.get('/:cid', async (req, res) => {
     const response = await cartModel.find().populate('products.product')
     res.json({response})
 
